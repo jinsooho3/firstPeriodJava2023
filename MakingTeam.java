@@ -48,30 +48,29 @@ public class MakingTeam {
         
         // 랜덤배열숫자로 각 새로운 배열에 집어넣기
         int[][] newArray = new int[6][6];
-        for(int i = 0, k = 0;i<6;i++){
+        for(int i = 0;i<6;i++){
             for(int j = 0;j<6;j++){
                 switch (randArrays[i][j]) {
                     case 1:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                     case 2:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                     case 3:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                     case 4:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                     case 5:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                     case 6:
-                        newArray[i][randArrays[i][j]-1] = array[i][j];
+                        newArray[randArrays[i][j]-1][i] = array[i][j];
                         break;
                 }
             }
-            k++;
         }
         // 랜덤으로 배열이 나눠졌는지 확인
         for (int i = 0; i < 6; i++) {
@@ -83,7 +82,7 @@ public class MakingTeam {
         for(int i = 0;i<6;i++){
             System.out.println((i+1) + "조 명단");
             for(int j = 0;j<6;j++){
-                System.out.println(newArray[j][i]);
+                System.out.println(newArray[i][j]);
             }
         }
     }
