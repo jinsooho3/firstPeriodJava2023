@@ -27,6 +27,7 @@ public class GoBackSort {
             targetArray[maxNumIndex] = targetArray[i];
             targetArray[i] = temp;
         }
+        // sort 결과 출력
         for(int i = 0;i<targetArray.length;i++){
             if(i != 0){
                 System.out.print(",");
@@ -35,3 +36,5 @@ public class GoBackSort {
         }
     }
 }
+// 생각보다 오래걸렸다.
+// 내일은 클래스, 메소드 별로 따개자
