@@ -16,12 +16,14 @@ public class BubbleSort {
         }
         System.out.println("-------------------------");
         //Sorting algorithm
-        for(int i = 0;i<wantToSortArray.length -1 ;i++){
-            if(wantToSortArray[i] > wantToSortArray[i+1]){
-                int temp;
-                temp = wantToSortArray[i];
-                wantToSortArray[i] = wantToSortArray[i+1];
-                wantToSortArray[i+1] = temp;
+        for(int i = 0;i<wantToSortArray.length ;i++){
+            for(int j = 1;j<wantToSortArray.length;j++){
+                if(wantToSortArray[j-1] > wantToSortArray[j]){
+                    int temp;
+                    temp = wantToSortArray[j-1];
+                    wantToSortArray[j-1] = wantToSortArray[j];
+                    wantToSortArray[j] = temp;
+                }
             }
         }
         // Just want to see random numbers  #not important
