@@ -1,0 +1,40 @@
+import javax.swing.event.ChangeEvent;
+
+/**
+ * SortingAlgorithm
+ */
+public class SortingAlgorithm {
+    public static void changeNum(int arg1,int arg2){
+        int temp = arg;
+        arg = arg2;
+        arg2 = temp;
+    }
+    
+}
+public class UpDownSort {
+    public static void main(String[] args) {
+        SortingAlgorithm sa = new SortingAlgorithm();
+        int[] wantToSortArray = {6,4,1,7,3,2,5};
+        int minNum = 0;//가장 작은수가 들어갈 인덱스번호
+        int maxNum = 0;//가장 큰수가 들어갈 인덱스번호
+        for(int i = 0,k=wantToSortArray.length-1;i<wantToSortArray.length;i++,k--){
+            for(int j = 0, l=0;j<wantToSortArray.length;j++,l++){
+                //원래번호보다 더 작은수가있으면 인덱스교체
+                if(minNum > wantToSortArray[j]){
+                    int minNumIndex = j; 
+                }
+                //원래 수보다 더 큰수가있으면 인덱스 교체
+                if(maxNum<wantToSortArray[l]){
+                    int maxNumIndex = l;
+                }
+            }
+            sa.changeNum(minNumIndex, k);
+        }
+        for(int i = 0;i<wantToSortArray.length;i++){
+            if(i != 0){
+                System.out.print(",");
+            }
+            System.out.print(wantToSortArray[i]);
+        }
+    }
+}
