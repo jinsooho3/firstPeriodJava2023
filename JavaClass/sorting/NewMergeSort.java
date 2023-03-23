@@ -2,15 +2,6 @@ public class NewMergeSort {
 
     public static int[] src;
     public static int[] tmp;
-    public static void main(String[] args) {
-        
-        src = new int[]{1, 9, 8, 5, 4, 2, 3, 7, 6};
-        tmp = new int[src.length];
-        printArray(src);
-        mergeSort(0, src.length-1);
-        printArray(src);
-    }
-
     public static void mergeSort(int start, int end) {
         if (start<end) {
             int mid = (start+end) / 2;
@@ -40,4 +31,14 @@ public class NewMergeSort {
             System.out.print(a[i]+" ");
         System.out.println();
     }
+    public static void main(String[] args) {
+        
+        src = new int[]{1, 9, 8, 5, 4, 2, 3, 7, 6};
+        tmp = new int[src.length];
+        printArray(src);
+        mergeSort(0, src.length-1);
+        printArray(src);
+    }
+
+    
 }
